@@ -7,6 +7,25 @@ console.log("app.js is working");
 
 $(document).ready(function() {
 
-console.log("jQuery is working");
+    console.log("jQuery is working");
+
+
+    //event listener
+    $('.first').on('click', function() {
+
+        console.log("first button works")
+    })
+
+    $('.second').on('click', buttonClick);
+
+    $('.third').on('click', 'button', function() {
+
+        console.log("third button works")
+    })
+
+    function buttonClick() {
+
+        console.log("second button works");
+    }
 
 });
